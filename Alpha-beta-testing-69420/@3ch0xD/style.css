@@ -1,0 +1,109 @@
+/* Fonts */
+@font-face {
+    font-family: Header;
+    src: url(Fonts/Bobbleboddy.ttf);
+}
+
+@font-face {
+    font-family: Bomb;
+    src: url(Fonts/Bombtrack\ Demo.ttf);
+}
+
+body{
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+ul{
+    list-style: none;
+    display: inline-flex;
+}
+
+li{
+    padding: 10px 10px;
+    font-size: 20px;
+    font-family: Header;
+    color: white;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 70px;
+    font-family: Bomb;
+    text-shadow: 0px 0px 50px #ededed;
+  }
+
+  #container {
+    position: relative;
+    height: 400px; /* Adjust the height as needed */
+    background-color: transparent;
+  }
+  
+  .tool {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  canvas {
+    background-color: #000;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s;
+    border-radius: 6px;
+  }
+  
+  .popup:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #333 transparent transparent transparent;
+  }
+  
+  .popup.show {
+    opacity: 1;
+  }
+
+  span{
+    font-size: 20px;
+  }
